@@ -7,7 +7,8 @@ function Main(props){
 
 const [books, setBooks] = useState(null)
 
-const URL = "https://cheesebackend.herokuapp.com/cheese/"
+//heroku url
+const URL = "https://bookmark-0.herokuapp.com/bookmarks/"
 
 const getBook = async ()=>{
     const response = await fetch(URL)
