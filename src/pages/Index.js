@@ -41,7 +41,7 @@ function Index(props) {
 
     return (
         <section>
-            <form onsubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input type="text" name="title" placeholder="title" value={newForm.title} onChange={handleChange} />
                 <input type="text" name="url" placeholder="url" value={newForm.url} onChange={handleChange} />
                 <input type="submit" value="Create Bookmark" />
