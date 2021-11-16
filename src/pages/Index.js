@@ -35,8 +35,6 @@ function Index(props) {
                 {props.books.map((book) =>(
                     <div>
                         <Link to={`/bookmarks/${book._id}`}><button>{book.title}</button></Link>
-                        <h3>
-                            <a href={book.url}>{book.url}</a></h3>
                     </div>
                 ))}
                 
