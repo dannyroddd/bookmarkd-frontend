@@ -26,12 +26,14 @@ body{
 // --------------------------
 
 nav {
-  @include white-text-black-bg;
+  
   display: flex;
   justify-content: flex-start;
 
   a {
-    @include white-text-black-bg;
+    color: white;
+    font-size: 2em;
+    
     div {
       margin: 10px;
       font-size: large;
@@ -129,5 +131,7 @@ button {
 .nav
 {
     justify-content:  center;
+    background-image: url('https://murals-weblinc.netdna-ssl.com/product_images/bookshelf-mural/5ec82cb0bd89dd0018f74bc3/product_large_image.jpg?c=1590176944');
+    background-size: 100%;
    
 }
