@@ -1,6 +1,9 @@
 // --------------------------
 // VARIABLES
 // --------------------------
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+
+
 $maincolor: darkgray;
 $contrastcolor: white;
 
@@ -138,4 +141,11 @@ button {
 
 .home {
     background-color: lightseagreen;
+}
+
+
+.addnewtext{
+    color: teal;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.5em;
 }

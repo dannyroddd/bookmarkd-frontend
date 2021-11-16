@@ -50,6 +50,7 @@ function Index(props) {
 
     return (
         <section>
+            <h2 className="addnewtext">Add a new Bookmark</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="title" placeholder="title" value={newForm.title} onChange={handleChange} />
                 <input type="text" name="url" placeholder="url" value={newForm.url} onChange={handleChange} />
