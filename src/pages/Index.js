@@ -29,12 +29,12 @@ function Index(props) {
             if (a.title < b.title) return -1;
             return 1;
         })
-        
+
         return (
             <section>
                 {props.books.map((book) =>(
                     <div>
-                        <Link to={`/bookmarks/${book._id}`}><h1>{book.title}</h1></Link>
+                        <Link to={`/bookmarks/${book._id}`}><button>{book.title}</button></Link>
                         <h3>
                             <a href={book.url}>{book.url}</a></h3>
                     </div>
