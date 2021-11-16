@@ -23,17 +23,27 @@ function Index(props) {
     }
 
     const loaded = () => {
+
+        //sort books in index in alphabetical order when they load
+        const inAlphOrder = props.books.sort((a,b)=>{
+            if (a.title < b.title) return -1;
+            return 1;
+        })
+        
         return (
             <section>
                 {props.books.map((book) =>(
                     <div>
                         <Link to={`/bookmarks/${book._id}`}><h1>{book.title}</h1></Link>
-                        <h3>{book.url}</h3>
+                        <h3>
+                            <a href={book.url}>{book.url}</a></h3>
                     </div>
                 ))}
+                
             </section>
         )
     }
+
 
     const loading= () => {
         return <h1>Loading...</h1>
@@ -46,6 +56,7 @@ function Index(props) {
                 <input type="text" name="url" placeholder="url" value={newForm.url} onChange={handleChange} />
                 <input type="submit" value="Create Bookmark" />
             </form>
+           
         {props.books ? loaded() : loading()}    
         </section>
     )
