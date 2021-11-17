@@ -1,0 +1,151 @@
+// --------------------------
+// VARIABLES
+// --------------------------
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+
+
+$maincolor: darkgray;
+$contrastcolor: white;
+
+@mixin white-text-black-bg {
+  color: $contrastcolor;
+  background-color: $maincolor;
+}
+
+@mixin black-test-white-bg {
+  color: $maincolor;
+  background-color: $contrastcolor;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgoldenrodyellow;
+    margin: 0;
+    padding: 0;
+}
+
+// --------------------------
+// Header
+// --------------------------
+
+nav {
+  
+  display: flex;
+  justify-content: flex-start;
+
+  a {
+    color: white;
+    font-size: 2em;
+    
+    div {
+      margin: 10px;
+      font-size: large;
+    }
+  }
+}
+
+// --------------------------
+// Form
+// -----------------
+
+
+section,
+div {
+  form {
+    input {
+      @include white-text-black-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 15px;
+      
+      &[type="submit"]:hover {
+        @include black-test-white-bg;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 15px;
+        transition: all 0.5s;
+        content: '»';
+
+
+      
+        
+       
+ 
+       
+       
+       
+        
+      }
+    }
+  }
+}
+
+// --------------------------
+// button
+// --------------------------
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    background-color: salmon;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    padding: 16px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+#delete{
+  background-color: red;
+}
+
+.nav
+{
+    justify-content:  center;
+    background-image: url('https://murals-weblinc.netdna-ssl.com/product_images/bookshelf-mural/5ec82cb0bd89dd0018f74bc3/product_large_image.jpg?c=1590176944');
+    background-size: 100%;
+   
+}
+
+.home {
+    background-color: lightseagreen;
+}
+
+
+.addnewtext{
+    color: teal;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.5em;
+}
